@@ -6,6 +6,9 @@
 This website was made with two purposes: 
  - To complete HCI course at [FESB (UNIST)](https://www.fesb.unist.hr/) 
  - It was made for Aerotechnic Association Split
+ 
+
+Netlify link to [website](https://aus-fesb.netlify.app/)
 
 
 ## What's inside? 🧐
@@ -35,4 +38,5 @@ A quick look at the top-level files and directories you'll see in this Gatsby pr
     |       |    └── Contact Desktop (img)
     ├── aus-website (source code)
     └── README.md
+
 Created by Anđela Bilić and Ivana Križanović
