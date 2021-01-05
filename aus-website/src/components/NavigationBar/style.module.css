@@ -16,6 +16,7 @@
     width: fit-content;
     font-family: "Montserrat";
     font-weight: bolder;
+    text-transform: uppercase;
     color: #D3AC2B;
   }
   .navigationBar li:hover {

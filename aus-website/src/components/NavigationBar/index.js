@@ -2,14 +2,15 @@ import React from 'react'
 
 import styles from './style.module.css'
 
+const navTabs = ['Home', 'Work', 'About us', 'Blog', 'Contact']
+
 const NavigationBar = () => (
-    <nav className={styles.navigationBar}>
-        <li className={styles.active}>HOME</li>
-        <li>WORK</li>
-        <li>BLOG</li>
-        <li>ABOUT US</li>
-        <li>CONTACT</li>
-    </nav>
-  )
+  <nav className={styles.navigationBar}>
+    {navTabs.map(
+      tab => <li className={tab === 'Home' ? styles.active : ''}>
+        {tab}</li>)
+    }
+  </nav>
+)
 
 export default NavigationBar
