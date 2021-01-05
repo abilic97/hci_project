@@ -1,0 +1,19 @@
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap);
+
+.logo {
+  display: flex;
+  flex-flow: column;
+  align-content:center;
+  align-items: center;
+  width: 14.72%;
+  margin-top: 15px;
+}
+ .sub {
+  text-align: center;
+  margin-left: 10px;
+  font-size: 14px;
+  color: #D3AC2B;
+  font-family: "Montserrat";
+  font-weight: bold;
+  font-weight:900;
+}
