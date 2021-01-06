@@ -5,10 +5,10 @@ import Logo from '../Logo'
 import NavigationBar from '../NavigationBar'
 import LoginButton from '../LoginButton'
 
-const NavigationHeader = () => (
-    <section className = {styles.navigationHeader}>
+const NavigationHeader = ({ activeTab }) => (
+    <section className={styles.navigationHeader}>
         <Logo />
-        <NavigationBar />
+        <NavigationBar activeTab={activeTab} />
         <LoginButton />
     </section>
 )
