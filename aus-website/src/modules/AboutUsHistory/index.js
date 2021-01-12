@@ -2,10 +2,11 @@ import React from 'react'
 import styles from './style.module.css'
 
 const AboutUsHistory = () => (
+    <main>
     <section className={styles.ourHistoryContainer}>
         <div className={styles.title}>Our history</div>
         <div className={styles.textContent}>
-Flow Design Team started VECTOR project as a group of enthusiasts at University of Split - FESB. After thorough research, our team members enrolled in undergraduate and graduate engineering programs soon started to develop and design the first concept.
+            Flow Design Team started VECTOR project as a group of enthusiasts at University of Split - FESB. After thorough research, our team members enrolled in undergraduate and graduate engineering programs soon started to develop and design the first concept.
 <p> </p>
 Our mission and goal are to share our interest and passion with fellow students, teachers and community – to present the necessary hands-on engineering skills involved in building aerial robotic systems.
 <p></p>
@@ -15,7 +16,8 @@ At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praese
 At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos do
         </div>
     </section>
+    </main>
 
-  )
+)
 
 export default AboutUsHistory
