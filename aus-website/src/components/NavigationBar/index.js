@@ -1,14 +1,16 @@
 import React from 'react'
+import { navs as navTabs } from '../../constants/const'
+import { Link } from "gatsby"
 
 import styles from './style.module.css'
 
-const navTabs = ['Home', 'Work', 'About us', 'Blog', 'Contact']
-
-const NavigationBar = props => (
+const NavigationBar = ({ activeTab }) => (
   <nav className={styles.navigationBar}>
-      {navTabs.map(tab => <li className={tab === props.activeTab ? styles.active : ''}>
-        {tab}</li>
-      )}
+        {navTabs.map(({tab, to}) => (
+          <Link to={to} >
+              <li className={tab === activeTab ? styles.active : ''}>{tab}</li>
+          </Link>)
+        )}
   </nav>
 )
 

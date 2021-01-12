@@ -27,3 +27,6 @@
   .navigationBar .active, .navigationBar .active:hover{
     border-bottom: 2px solid #D3AC2B;
   }
+  a {
+    text-decoration: none;
+  }
