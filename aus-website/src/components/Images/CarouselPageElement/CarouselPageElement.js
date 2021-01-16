@@ -26,7 +26,7 @@ const CarouselPageElement = () => {
     <Container>
       <Carousel>
         {data.photos.edges.map(image => (
-          <Carousel.Item key={image.node.ide}>
+          <Carousel.Item key={image.node.id}>
             <div style={{maxHeight: "400px"}}>
             <Img
               fluid={image.node.childImageSharp.fluid}
