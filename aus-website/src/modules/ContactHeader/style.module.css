@@ -1,0 +1,35 @@
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap);
+
+.headerContainer {
+    position: relative;
+    height: 380px;
+}
+
+.overlay { 
+    position: absolute; 
+    background-color: #1F2532; 
+    height: 100%;
+    width: 100%;
+    opacity: 0.5;
+    top: 0;
+    left: 0;
+}
+.headerTitle {
+    position: absolute;
+    color: #D3AC2B;
+    top: 50%;
+    left: 40%;
+    text-transform: uppercase;
+    font-family: "Montserrat";
+    font-weight: bolder;
+    font-size: 32px;
+}
+.headerText {
+    position: absolute;
+    color: #D3AC2B;
+    top: 60%;
+    left: 48%;
+    font-family: "Montserrat";
+    font-weight: bold;
+    font-size: 20px;
+}

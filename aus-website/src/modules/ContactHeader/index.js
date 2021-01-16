@@ -1,14 +1,15 @@
 import React from 'react'
-import AboutUsTitleImage from '../../components/Images/ContactHeaderImage/ContactHeaderImage'
+import ContactHeaderImage from '../../components/Images/ContactHeaderImage/ContactHeaderImage'
 
 import styles from './style.module.css'
 
 const ContactHeader = () => (
-    <div>
-      <div><ContactHeaderImage /></div>
-      <div>Have some questions?</div>
-      <div>Let's connect</div>
+    <div className={styles.headerContainer}>
+        <ContactHeaderImage />
+        <div className={styles.overlay}></div>
+        <div className={styles.headerTitle}>Have some questions?</div>
+        <div className={styles.headerText}>Let's connect!</div>
     </div>
-  )
+)
 
 export default ContactHeader
