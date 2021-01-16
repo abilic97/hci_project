@@ -1,0 +1,29 @@
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap);
+
+.articlesTitle {
+    font-family: "Montserrat";
+    font-size: 28px;
+    font-weight: bolder;
+    text-align: center;
+    padding: 2em;
+}
+.articleContainer {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.article{
+    background-color: #C4C4C4;
+    opacity: 0.2;
+    flex: 1 0 20%;
+    margin: 0em 3em 2em 2em ;
+    width: 295px;
+    height: 390px;
+    text-align: center;
+    font-family: "Montserrat";
+    max-width: 380px;
+    max-height: 390px;
+    position: relative;
+}
