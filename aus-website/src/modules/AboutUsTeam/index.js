@@ -4,7 +4,7 @@ import TeamPicture from '../../components/Images/TeamPicture/TeamPicture'
 import styles from './style.module.css'
 
 const AboutUsTeam = () => (
-    <section>
+    <section className={styles.mainContainer}>
         <div className={styles.teamTitle}>Our team</div>
         <div className={styles.mainTeamContainer}>
             <div className={styles.teamMemberContainer}>
