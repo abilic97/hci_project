@@ -5,7 +5,7 @@ import Img from "gatsby-image"
 const ContactHeaderImage = () => {
     const data = useStaticQuery(graphql`
       {
-        myImage: file(relativePath: {eq: "ContactHeader.png"}) {
+        myImage: file(relativePath: {eq: "TitleImage3.png"}) {
           childImageSharp {
             fluid(maxWidth: 800 maxHeight: 200) {
               ...GatsbyImageSharpFluid
@@ -15,7 +15,8 @@ const ContactHeaderImage = () => {
       }
     `)
     return (
-        <Img fluid={data.myImage.childImageSharp.fluid} />)
+      <Img style={{ height: "100%", width: "100%" }}
+      fluid={data.myImage.childImageSharp.fluid} />)
    }
   
   export default ContactHeaderImage
