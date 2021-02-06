@@ -1,5 +1,5 @@
 @import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap);
-.navigationBar {
+.navBar {
     display: flex;
     justify-content: space-evenly;
     align-items: center;  
@@ -7,7 +7,7 @@
     width: 700px;
   }
   
-  .navigationBar li {
+  .navBar li {
     list-style: none;
     padding-left: 25px;
     padding-right: 25px;
@@ -19,14 +19,14 @@
     text-transform: uppercase;
     color: #D3AC2B;
   }
-  .navigationBar li:hover {
+  .navBar li:hover {
     border-bottom: 2px solid #D3AC2B;
     cursor: pointer;
   }
   
-  .navigationBar .active, .navigationBar .active:hover{
+  .navBar .active, .navBar .active:hover{
     border-bottom: 2px solid #D3AC2B;
   }
   a {
-    text-decoration: none;
+    text-decoration: none !important;
   }

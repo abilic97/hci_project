@@ -3,6 +3,7 @@ import Logo from '../../components/Logo'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEnvelope, faPhone } from '@fortawesome/free-solid-svg-icons'
 import { faYoutube, faFacebook, faInstagram, faTwitter } from "@fortawesome/free-brands-svg-icons"
+import { Link } from "gatsby"
 import styles from './style.module.css'
 
 const navTabs = ['Home', 'Accommodation', 'Photo Gallery', 'Contact']
@@ -17,6 +18,7 @@ const Footer = () => (
           <li>{tab}</li>)
         }
       </ul>
+
 
       <ul className={styles.contact}>
         <div className={styles.headlines}>Contact</div>
@@ -35,14 +37,13 @@ const Footer = () => (
         <li>Terms of use</li>
       </ul>
     </span>
-    <hr></hr>
-    <div className={styles.socialContainer}>
-      <div className={styles.iconStyle}>
-        <FontAwesomeIcon icon={faTwitter} color="#D3AC2B" />
-        <FontAwesomeIcon icon={faFacebook} color="#D3AC2B" />
-        <FontAwesomeIcon icon={faYoutube} color="#D3AC2B" />
-        <FontAwesomeIcon icon={faInstagram} color="#D3AC2B" />
-      </div>
+    <div className={styles.socialContainer}> 
+    <div className ={styles.socialIconsContainer}>
+        <Link external to="https://twitter.com/?lang=en"><FontAwesomeIcon icon={faTwitter} color="#D3AC2B" /></Link>
+        <Link external to="https://web.facebook.com/flowdesignteam/?_rdc=1&_rdr"><FontAwesomeIcon icon={faFacebook} color="#D3AC2B" /> </Link>
+        <Link external to="https://www.youtube.com/channel/UC9vR4jHHttIFSnOXp32KTXg"><FontAwesomeIcon icon={faYoutube} color="#D3AC2B" /></Link>
+        <Link external to="https://www.instagram.com/flowdesignteam/?hl=en"><FontAwesomeIcon icon={faInstagram} color="#D3AC2B" /> </Link>
+        </div>  
       <div className={styles.copyright}>
         2020, Aerotehnic Association Split
     </div>

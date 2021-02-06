@@ -1,11 +1,11 @@
 // /src/layouts/headerFooter.js
 import React from 'react'
-import NavigationHeader from '../modules/NavigationHeader'
+import NavHeader from '../modules/NavHeader'
 import Footer from '../modules/Footer'
  
 const HeaderFooterLayout = ({children, activeTab}) => (
   <>
-    <NavigationHeader activeTab={activeTab} />
+    <NavHeader activeTab={activeTab} />
       {children}
     <Footer />
   </>

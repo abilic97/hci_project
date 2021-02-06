@@ -4,14 +4,14 @@ import { Link } from "gatsby"
 
 import styles from './style.module.css'
 
-const NavigationBar = ({ activeTab }) => (
-  <nav className={styles.navigationBar}>
+const NavBar = ({ activeTab }) => (
+  <nav className={styles.navBar}>
         {navTabs.map(({tab, to}) => (
-          <Link to={to} >
+          <Link to={to} key = {tab} >
               <li className={tab === activeTab ? styles.active : ''}>{tab}</li>
           </Link>)
         )}
   </nav>
 )
 
-export default NavigationBar
+export default NavBar
