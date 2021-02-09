@@ -1,13 +1,13 @@
 import React from "react"
 import HeaderFooterLayout from "../layouts/headerFooter"
 import WorkHeader from "../modules/WorkHeader"
-import WorkProjects from "../modules/WorkProjects"
+import WorkFeatures from "../modules/WorkFeatures"
 
 const IndexPage = () => (
     <main>
-        <HeaderFooterLayout activeTab="About us">
+        <HeaderFooterLayout activeTab="Work">
             <WorkHeader />
-            <WorkProjects />
+            <WorkFeatures />
         </HeaderFooterLayout>
     </main>
 )
