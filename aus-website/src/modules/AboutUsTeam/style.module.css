@@ -45,14 +45,37 @@
 .overlay { 
     position: absolute; 
     transition: all 0.3s ease; 
-    opacity: 0; 
-    background-color: #1F2532; 
+    background: rgba(31,37,50,0);
     height: 100%;
     width: 100%;
     top: 0;
     left: 0;
-} 
 
-.teamMemberContainer .overlay:hover {
-    opacity: 0.50;
+}
+.socialIconContainer {
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: 0.5em;
+    font-size: 30px;
+    position: absolute;
+    z-index: 100;
+    opacity: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+
+.overlay:hover {
+    background: rgba(31,37,50,0.5);  
+}
+
+.overlay:hover .socialIconContainer {
+    opacity: 1;
+
+}
+
+.iconLink:hover {
+    transform: scale(1.2);
+
 }
