@@ -1,0 +1,37 @@
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap);
+.workProjectsTitle {
+    text-transform: uppercase;
+    font-family: "Montserrat";
+    font-size: 28px;
+    font-weight: bolder;
+    text-align: center;
+    padding-top : 2em;
+}
+
+.workContainer {
+    display: flex;
+    flex-direction: row;
+    padding: 3em;
+    justify-content: space-around;
+}
+.listSTyle {
+    padding-right: 2em;
+    padding-left: 5em;
+    width: 15em;
+}
+.projectContent {
+    padding-left: 5em;
+    padding-right: 15em;
+    padding-bottom:2em;
+    text-align: justify;
+    text-justify: inter-word;
+    font-family: "Montserrat";
+}
+
+.projectListStyle
+{
+    margin-bottom: 10px;
+    font-size: 22px;
+    list-style: none;
+    font-family: "Montserrat";
+}
