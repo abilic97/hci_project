@@ -1,23 +1,30 @@
 import React from 'react'
-import { useStaticQuery, graphql } from "gatsby"
-import Img from "gatsby-image"
+import { graphql, useStaticQuery } from 'gatsby'
+import Img from 'gatsby-image'
 
-const AboutUsTitleImage = () => {
-    const data = useStaticQuery(graphql`
-      {
-        myImage: file(relativePath: {eq: "duje.jpeg"}) {
-          childImageSharp {
-            fluid {
-              ...GatsbyImageSharpFluid
-            }
+const TeamPicture = ({ fileName, alt, style }) => {
+  const { allImageSharp } = useStaticQuery(graphql`
+    query {
+      allImageSharp {
+        nodes {
+          fluid {
+            originalName
+            ...GatsbyImageSharpFluid
           }
         }
       }
-    `)
-    return (
-        <Img style={{ height: "100%", width: "100%" }}
-        imgStyle={{ objectFit: "cover", objectPosition: "0 0"}}
-        fluid={data.myImage.childImageSharp.fluid} />)
-   }
-  
-  export default AboutUsTitleImage
+    }
+  `)
+
+
+  const fluid = allImageSharp.nodes.find(n => n.fluid.originalName === fileName)
+    .fluid
+
+  return (
+      <Img fluid={fluid} alt={alt} style={{ height: "100%", width: "100%" }}
+        imgStyle={{ objectFit: "cover", objectPosition: "0 0"}}/>
+
+  )
+}
+
+export default TeamPicture

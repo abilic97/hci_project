@@ -1,5 +1,3 @@
-@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap);
-
 .mainContainer {
     background-color: #FDFDFD;
 }
@@ -35,6 +33,7 @@
 
 .infoContainer {
     padding-top: 0.5em;
+    font-weight: 600;
 }
 .pictureContainer {
     position: relative;
