@@ -13,7 +13,6 @@ import {
   WhatsappIcon
 } from "react-share";
 
-import MailboxImage from "../components/Images/MailboxImage/MailboxImage"
 import styles from './blogpost.module.css'
 import HeaderFooterLayout from '../layouts/headerFooter'
 
