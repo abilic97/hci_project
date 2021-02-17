@@ -1,0 +1,24 @@
+.searchBox {
+    margin: 2em;
+    width: 700px;
+    height: 45px;
+    text-align: center;
+    background-color: #CBD0D8;
+    opacity: 36.4%;
+    border: 3px solid #CBD0D8;
+    border-radius: 8px;
+}
+.searchBox:focus {
+    border: 1px solid #1F2532;
+    outline: none;
+    border-radius: 8px;
+}
+.searchContainer {
+    text-align: center;
+}
+
+.searchBox::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #1c1e20;
+    opacity: 1; /* Firefox */
+  }
+  

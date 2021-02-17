@@ -8,7 +8,7 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-modal-routing`, 
+    `gatsby-plugin-modal-routing`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -23,6 +23,14 @@ module.exports = {
         accessToken: process.env.ACCESS_KEY,
         downloadLocal: true,
       }
+    },
+    {
+      resolve: `gatsby-plugin-material-ui`,
+      options: {
+        stylesProvider: {
+          injectFirst: true,
+        },
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,
