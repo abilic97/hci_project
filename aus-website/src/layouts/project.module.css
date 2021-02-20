@@ -1,0 +1,46 @@
+.projectContainer {
+    font-family: "Montserrat";
+    margin-left: 7em;
+    margin-right: 7em;
+    flex-wrap: wrap;
+    padding: 2em;
+}
+
+.projectContent {
+    font-family: "Montserrat";
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.projectName {
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+.projectDescr {
+    width: fit-content;
+
+}
+
+.projectImg {
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+.shareContainer {
+    display: inline-flex;
+    padding-bottom: 1em;
+    padding-top:2em;
+}
+
+.shareIconsCont {
+    display: grid;
+    grid-auto-flow: column;
+    grid-gap: 1.5em;
+}
+.shareText {
+    font-size: 27px;
+    font-family: "Montserrat";
+    padding-right: 1em;
+  }

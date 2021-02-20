@@ -1,37 +1,115 @@
-@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap);
-.workProjectsTitle {
+.projectsHeadline {
     text-transform: uppercase;
     font-family: "Montserrat";
-    font-size: 28px;
-    font-weight: bolder;
     text-align: center;
-    padding-top : 2em;
+    font-weight: 600;
+    padding: 2em
 }
-
-.workContainer {
-    display: flex;
-    flex-direction: row;
-    padding: 3em;
-    justify-content: space-around;
-}
-.listSTyle {
-    padding-right: 2em;
-    padding-left: 5em;
-    width: 15em;
-}
-.projectContent {
-    padding-left: 5em;
-    padding-right: 15em;
-    padding-bottom:2em;
-    text-align: justify;
-    text-justify: inter-word;
-    font-family: "Montserrat";
-}
-
-.projectListStyle
-{
-    margin-bottom: 10px;
-    font-size: 22px;
+.categories {
     list-style: none;
+    text-align:center;
     font-family: "Montserrat";
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-bottom: 4em;
+}
+
+.categories li {
+    font-weight: 600;
+    border-bottom:2px solid transparent;
+    transition: border 0.3s linear;
+    margin: 0.5em;
+    padding-left:1em;
+    padding-right: 1em;
+    color: grey;
+}
+.categories li a {
+    padding-bottom: 8px;
+    text-decoration: none;
+    margin-bottom: 20px; 
+    letter-spacing: .1em;
+}
+
+.categories li:nth-child(1):hover{
+    border-bottom:4px solid #000000;
+}
+.categories li:nth-child(2):hover{
+    border-bottom:4px solid #97B8ED;
+}
+.categories li:nth-child(3):hover{
+    border-bottom:4px solid #E96EE9;
+}
+.categories li:nth-child(4):hover{
+    border-bottom:4px solid #D3AC2B;
+}
+.categories li:nth-child(5):hover{
+    border-bottom:4px solid #77D96E;
+}
+
+.projectContainer {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.project {
+    max-width: 500px;
+    background: white;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-bottom: 3em;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    text-align: center;
+    border-radius: 2px;
+    box-shadow: 0 20px 20px rgba(0,0,0,.1);
+}
+
+.project:hover {
+    transform: scale(1.05);
+}
+
+.projectName {
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: capitalize;
+    font-family: "Montserrat";
+    margin-bottom: 0.5em;
+    margin-top: 1em;
+}
+
+.ellipsisContainer {
+    text-align: justify;
+    padding: 0em 1em 0em 1em;
+}
+.categoryContainer {
+    display: inline-flex;
+    flex-wrap: wrap;
+    text-transform: uppercase;
+    width: 500px;
+    padding-bottom: 1.5em;
+}
+.test {
+    background: rgb(253,253,253, 1);
+}
+.categoryContainer > div {
+    margin:6px;
+    padding:1em;
+    background-color: #E5E5E5;
+    padding: 0 1em 0 1em;
+    border-radius: 8px;
+}
+
+.linkToProjects {
+    text-decoration: none;
+    color: #1F2532;
+    margin-bottom: 1em;
+
+}
+.linkToProjects:hover {
+    color: #1F2532;
 }

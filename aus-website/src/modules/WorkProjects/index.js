@@ -1,35 +1,77 @@
-import React from 'react'
-import ContactHeaderImage from '../../components/Images/ContactHeaderImage/ContactHeaderImage'
-import ProjectsMenu from '../../components/ProjectsMenu'
-
+import React from "react"
+import { useStaticQuery, graphql, Link } from 'gatsby'
+import { renderRichText } from "gatsby-source-contentful/rich-text"
+import Img from 'gatsby-image'
+import TextEllipsis from 'react-text-ellipsis';
 import styles from './style.module.css'
 
-const WorkProjects = () => (
-    <section>
-        <div className={styles.workProjectsTitle}>Projects</div>
-        <div>
-        <ProjectsMenu >/</ProjectsMenu>
+const WorkProjects = ({ posts }) => {
+    const data = useStaticQuery(graphql`
+    query{
+        allContentfulProjects {
+            edges {
+              node {
+                projectName
+                slug
+                projectImage {
+                  fixed (height: 200 width: 500) {
+                    aspectRatio
+                    base64
+                    height
+                    src
+                    srcSet
+                    srcSetWebp
+                    srcWebp
+                    width
+                  }
+                }
+                projectDescription {
+                  raw
+                }
+              }
+            }
+        }
+    }
+ `
+    )
+
+    return (
+        <div className={styles.test}>
+            <h2 className={styles.projectsHeadline}>Projects</h2>
+            <div className={styles.projectContainer}>
+                {data.allContentfulProjects.edges.map(node => {
+                    return (
+                        <div className={styles.project}>
+                            <Link className={styles.linkToProjects} to={`/posts/${node.node.slug}`}>
+                                <div>
+                                    <Img fixed={node.node.projectImage.fixed} /> </div>
+                                <div>
+                                    <div className={styles.projectName}>{node.node.projectName}</div>
+                                    <div className={styles.ellipsisContainer}>
+                                        <TextEllipsis
+                                            lines={2}
+                                            tag={'p'}
+                                            ellipsisChars={'...'}
+                                            tagClass={'classname'}
+                                            debounceTimeoutOnResize={200}
+                                            useJsOnly={true}
+                                            onResult={(result) => {
+                                                if (result === TextEllipsis.RESULT.TRUNCATED)
+                                                    console.log('text get truncated');
+                                                else
+                                                    console.log('text does not get truncated');
+                                            }}>
+                                            {renderRichText(node.node.projectDescription)}
+                                        </TextEllipsis>
+                                    </div>
+                                </div>
+                            </Link>
+                        </div>
+                    )
+                })}
+            </div>
         </div>
-        
-        
-
-                <div className={styles.projectContent}>
-                    Flow Design Team started VECTOR project as a group of enthusiasts at University of Split - FESB. After thorough research, our team members enrolled in undergraduate and graduate engineering programs soon started to develop and design the first concept.
-<p> </p>
-Our mission and goal are to share our interest and passion with fellow students, teachers and community – to present the necessary hands-on engineering skills involved in building aerial robotic systems.
-<p></p>
-Student organisation based at University of Split.
-We develop and prototype UAVs - write our own code, test electronic systems and design our own aerial vehicle.
-At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.
-At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos do
-<ContactHeaderImage></ContactHeaderImage>
-                    <p>
-                        We develop and prototype UAVs - write our own code, test electronic systems and design our own aerial vehicle.
-                        At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.
-At vero eos et accusamus et iusto  </p>
-                </div>
-
-    </section>
-)
+    )
+}
 
 export default WorkProjects

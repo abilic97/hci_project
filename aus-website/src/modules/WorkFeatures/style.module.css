@@ -8,6 +8,7 @@
 }
 .featuresContainer {
     padding: 2em;
+    background:  rgb(253,253,253, 1);
 
 }
 .featureComponent >h4 {

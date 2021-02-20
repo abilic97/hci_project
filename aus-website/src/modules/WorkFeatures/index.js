@@ -6,7 +6,7 @@ import styles from './style.module.css'
 
 const WorkFeatures = () => (
     < div className={styles.featuresContainer}>
-        <h2>Our Achievements</h2>
+        <h2>OUR ACHIEVEMENTS</h2>
         <div className={styles.features}>
             <div className={styles.featureComponent}>
                 <FontAwesomeIcon className={styles.ikona} icon={faTachometerAlt} color="#D3AC2B" padding="1em"></FontAwesomeIcon>
