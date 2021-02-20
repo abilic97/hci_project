@@ -4,7 +4,7 @@ import { renderRichText } from "gatsby-source-contentful/rich-text"
 import Img from 'gatsby-image'
 import styles from './style.module.css'
 
-const BlogContainer = () => {
+const BlogContainer = ( { blogPosts } ) => {
   const data = useStaticQuery(graphql`
     query {
     allContentfulBlogPost {
@@ -37,7 +37,7 @@ const BlogContainer = () => {
     <section className={styles.container}>
       <div>
         <ul className={styles.blogpost}>
-          {data.allContentfulBlogPost.edges.map(node => {
+          {blogPosts.map(node => {
             return (
 
               <li className={styles.postBackground}>
@@ -57,21 +57,24 @@ const BlogContainer = () => {
       </div>
       <div className={styles.categories}>
       Categories
-        <div className={styles.categoryItem}>
+      <Link to={`/blog`} className={styles.linkStyle}><div className={styles.categoryItem}>
+          All posts
+        </div></Link>
+        <Link to={`/posts/Mehanical`} className={styles.linkStyle}><div className={styles.categoryItem}>
           Mehanical
-        </div>
-        <div className={styles.categoryItem}>
+        </div></Link>
+        <Link to={`/posts/Software`} className={styles.linkStyle}><div className={styles.categoryItem}>
           Software
-        </div>
-        <div className={styles.categoryItem}>
+        </div></Link>
+        <Link to={`/posts/Electronics`} className={styles.linkStyle}><div className={styles.categoryItem}>
           Electronics
-        </div>
-        <div className={styles.categoryItem}>
+        </div></Link>
+        <Link to={`/posts/Competitions`} className={styles.linkStyle}><div className={styles.categoryItem}>
           Competitions
-        </div>
-        <div className={styles.categoryItem}>
+        </div></Link>
+        <Link to={`/posts/Events`} className={styles.linkStyle}><div className={styles.categoryItem}>
           Events
-        </div>
+        </div></Link>
       </div>
     </section>
   )
