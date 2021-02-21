@@ -7,7 +7,7 @@ const MapImage = () => {
     {
       myImage: file(relativePath: {eq: "map.jpeg"}) {
         childImageSharp {
-          fixed(height: 320 width: 700) {
+          fixed(height: 220 width: 700) {
             ...GatsbyImageSharpFixed
           }
         }

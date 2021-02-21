@@ -54,14 +54,16 @@
     padding-bottom: 3em;
 }
 
-.inputStyle:focus {
+.input:focus {
     border: 1px solid #D3AC2B;
     border-radius: 10px;
+    outline: none;
   }
 
   .inputMsg:focus {
     border: 1px solid #D3AC2B;
     border-radius: 10px;
+    outline: none;
   }
 
 .submitButton{
