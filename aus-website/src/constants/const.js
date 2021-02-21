@@ -3,7 +3,7 @@ export const navs = [
     { tab: "Work", to: "/work" },
     { tab: "About us", to: "/aboutus" },
     { tab: "Blog", to: "/blog" },
-    { tab: "Contact", to: "/" },
+    { tab: "Contact", to: "/contact" },
   ]
   
   

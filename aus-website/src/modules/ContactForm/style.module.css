@@ -1,0 +1,95 @@
+.contactContainer{
+    display: flex;
+    justify-content: space-around;
+    padding: 1em 2em 1em 2em;
+    background: rgb(253,253,253, 1);
+    font-family: "Montserrat";
+}
+
+.conactSend {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1em;
+
+}
+.conactSend > h2 {
+    padding-top: 2em;
+    padding-bottom: 1em;
+}
+
+.contactInPerson {
+    display: flex;
+    flex-direction: column;
+}
+.contactInPerson > h2 {
+    padding-top: 2em;
+    padding-bottom: 1em;
+    text-align: center;
+}
+
+.input {
+    margin-bottom: 2em;
+    width: 550px;
+    height: 45px;
+    background:rgba(196, 196, 196, 0.3);
+    border-radius: 10px;
+    color:black;
+    font-family: "Montserrat";
+    border: 2px solid transparent;
+    font-size: 18px;
+}
+
+.inputMsg {
+    margin-bottom: 2em;
+    width: 550px;
+    height: 100px;
+    background:rgba(196, 196, 196, 0.3);
+    border-radius: 10px;
+    color:black;
+    font-family: "Montserrat";
+    border: 2px solid transparent;
+    font-size: 18px;
+    text-align: start;
+    padding-bottom: 3em;
+}
+
+.inputStyle:focus {
+    border: 1px solid #D3AC2B;
+    border-radius: 10px;
+  }
+
+  .inputMsg:focus {
+    border: 1px solid #D3AC2B;
+    border-radius: 10px;
+  }
+
+.submitButton{
+    border:none;
+    background-color: #D3AC2B;
+    font-size: 18px;
+    color:white;
+    padding-left: 1.4em;
+    padding-right: 1.4em;
+    padding-top:0.5em;
+    padding-bottom: 0.5em;
+  }
+
+  .contactInfo {
+      font-size: 20px;
+      font-weight: bold;
+      padding-top: 1em;
+      display: inline-flex;
+  }
+
+  .information {
+      font-weight: lighter;
+      padding-left: 0.4em;
+  }
+
+  .infoContainer {
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+      padding-bottom: 1em;
+  }
