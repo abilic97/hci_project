@@ -46,7 +46,7 @@ const MainPageArticles = () => {
               <div className={styles.articleTitle}>{node.node.title}</div>
               <div className={styles.elipsis}>
                 <TextEllipsis
-                  lines={5}
+                  lines={6}
                   tag={'p'}
                   ellipsisChars={'...'}
                   tagClass={'className'}
