@@ -1,4 +1,5 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { Link } from 'gatsby'
 import { renderRichText } from "gatsby-source-contentful/rich-text"
 import Img from 'gatsby-image'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -17,6 +18,15 @@ import styles from './blogpost.module.css'
 import HeaderFooterLayout from '../layouts/headerFooter'
 
 const BlogPost = ({ pageContext }) => {
+
+  const [email, seteMail] = useState("")
+  const subscribe = () => {
+    if (email === "") {
+      window.alert("Enter your e-mail if you want to subscribe")
+    } else {
+      window.alert("You have successfully subscribed to our Newsletter!")
+    }
+  }
 
   return (
     <HeaderFooterLayout>
@@ -73,8 +83,8 @@ const BlogPost = ({ pageContext }) => {
             <FontAwesomeIcon icon={faEnvelopeOpenText} color='#D3AC2B' className={styles.mailIcon} />
             <div className={styles.subscribeText}>Subscribe to our newsletter and get interesting news right in your inbox</div>
             <div className={styles.submitContainer}>
-              <input className={styles.emailInput} type="email" name="email" placeholder="Enter your e-mail"></input>
-              <button className={styles.submitButton}>Subscribe</button>
+              <input className={styles.emailInput} type="email" name="email" placeholder="Enter your e-mail" onChange={e => seteMail(e.target.value)}></input>
+              <button className={styles.submitButton} onClick={subscribe}>Subscribe</button>
             </div>
             <div className={styles.socialIconContainer}>
               <a href="https://web.facebook.com/flowdesignteam/?_rdc=1&_rdr"> <FontAwesomeIcon className={styles.iconLink} icon={faFacebook} /></a>
@@ -84,23 +94,25 @@ const BlogPost = ({ pageContext }) => {
           </div>
           <div className={styles.categories}>
             Categories
-        <div className={styles.categoryItem}>
+      <Link to={`/blog`} className={styles.linkCatStyle}><div className={styles.categoryItem}>
+              All posts
+        </div></Link>
+            <Link to={`/posts/Mehanical`} className={styles.linkCatStyle}><div className={styles.categoryItem}>
               Mehanical
-        </div>
-            <div className={styles.categoryItem}>
+        </div></Link>
+            <Link to={`/posts/Software`} className={styles.linkCatStyle}><div className={styles.categoryItem}>
               Software
-        </div>
-            <div className={styles.categoryItem}>
+        </div></Link>
+            <Link to={`/posts/Electronics`} className={styles.linkCatStyle}><div className={styles.categoryItem}>
               Electronics
-        </div>
-            <div className={styles.categoryItem}>
+        </div></Link>
+            <Link to={`/posts/Competitions`} className={styles.linkCatStyle}><div className={styles.categoryItem}>
               Competitions
-        </div>
-            <div className={styles.categoryItem}>
+        </div></Link>
+            <Link to={`/posts/Events`} className={styles.linkCatStyle}><div className={styles.categoryItem}>
               Events
-        </div>
+        </div></Link>
           </div>
-
         </div>
       </main>
     </HeaderFooterLayout>

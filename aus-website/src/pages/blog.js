@@ -25,6 +25,7 @@ query {
         title
         author
         slug
+        category
         blogImage {
           fixed (width: 390 height:274) {
             src
