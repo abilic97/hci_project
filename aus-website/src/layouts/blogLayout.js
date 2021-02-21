@@ -3,6 +3,7 @@ import HeaderFooterLayout from "../layouts/headerFooter"
 import BlogContainer from "../modules/BlogContainer"
 import BlogTitleImage from "../components/Images/BlogTitleImage/BlogTitleImage"
 import Search from "../components/Search"
+import { graphql } from "gatsby"
 
 const blogLayout = props => {
     const {
