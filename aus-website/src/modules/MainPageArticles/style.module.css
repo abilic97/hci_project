@@ -11,6 +11,7 @@
 .articleContainer {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
 
 }
 
@@ -18,13 +19,14 @@
     display: flex;
     flex-wrap: wrap;
     flex:1 0 20%;
-    max-width: 500px;
     flex-direction: column;
     text-align: center;
     font-family: "Montserrat";
     position: relative;
     border-radius: 2px;
     box-shadow: 0 20px 20px rgba(0,0,0,.1);
+    max-width: 500px;
+    margin-bottom: 1em;
 
 }
 
