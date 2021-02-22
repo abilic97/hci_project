@@ -5,7 +5,7 @@ import ContactForm from "../modules/ContactForm"
 
 const IndexPage = () => (
   <main>
-    <HeaderFooterLayout activeTab="Home">
+    <HeaderFooterLayout activeTab="Contact">
         <ContactHeader />
         <ContactForm />
 

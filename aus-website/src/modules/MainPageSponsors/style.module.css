@@ -8,13 +8,15 @@
     padding: 2em;
 }
 
-.spons {
-display: flex;
-flex-wrap: wrap;
-align-items: center;
-justify-content: space-around;
+.sponsorsContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-left: 4em;
+    padding-right: 4em;
 
 }
-.spons * {
-    flex: 1 0 20%;
+.sponsorsContainer * {
+    width: calc(100% * (1/6) - 10px - 1px);
 }

@@ -10,8 +10,8 @@ const SponsorsImages = () => {
          node {
            id
            childImageSharp {
-             fluid(maxHeight: 400) {
-               ...GatsbyImageSharpFluid
+             fixed(height: 200 ) {
+               ...GatsbyImageSharpFixed
              }
            }
          }
@@ -21,9 +21,9 @@ const SponsorsImages = () => {
  `)
     return (
         data.photos.edges.map(image => (
-            <div style={{ maxHeight: "180px", maxWidth: "180px", padding: "1em"}}>
+            <div>
                 <Img
-                    fluid={image.node.childImageSharp.fluid}
+                    fixed={image.node.childImageSharp.fixed}
                     alt="Images">
                 </Img></div>
 

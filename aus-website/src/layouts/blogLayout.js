@@ -29,6 +29,7 @@ query BlogQuery($category: String) {
         node {
           title
           slug
+          category
           content {
             raw
           }
