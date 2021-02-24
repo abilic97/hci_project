@@ -11,8 +11,10 @@ const navTabs = ['Home', 'Accommodation', 'Photo Gallery', 'Contact']
 const Footer = () => (
   <footer className={styles.footer}>
     <span className={styles.footerLinks}>
+      <div className={styles.logo}>
       <Logo></Logo>
-      <ul>
+      </div>
+      <ul className={styles.menu}>
         <div className={styles.headlines}>Information</div>
         {navTabs.map(tab =>
           <li>{tab}</li>)

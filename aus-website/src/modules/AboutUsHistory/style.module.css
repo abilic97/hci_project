@@ -25,3 +25,20 @@
     text-align: justify;
     text-justify: inter-word;
 }
+
+
+@media screen and (max-width: 700px) {
+    .ourHistoryContainer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .title {
+        text-align: center;
+        border:none;
+        padding:1.5em 0 0 0;
+    }
+    .textContent {
+        text-align: center;
+    }
+}

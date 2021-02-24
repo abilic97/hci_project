@@ -34,3 +34,18 @@
   a {
     text-decoration: none !important;
   }
+  .hamburger {
+    display: none;
+  }
+
+
+  @media screen and (max-width: 800px) {
+    .navBar li {display: none;}
+    .hamburger {display: block;
+      float: right;
+      font-size: 45px;
+      color: white;
+      padding-bottom: 0.5em;
+      padding-left: 4em;
+      }
+  }

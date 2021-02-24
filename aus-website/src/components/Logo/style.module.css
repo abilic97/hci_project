@@ -7,6 +7,7 @@
   align-items: center;
   width: 14.72%;
   margin-top: 15px;
+  flex-wrap: wrap;
 }
  .sub {
   text-align: center;
@@ -16,4 +17,9 @@
   font-family: "Montserrat";
   font-weight: bold;
   font-weight:900;
+}
+
+@media screen and (max-width: 800px) {
+  .sub {display: none;}
+  .logo {padding-left: 1em;}
 }

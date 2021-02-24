@@ -17,15 +17,15 @@ exports.createPages = async ({ graphql, actions }) => {
         author
         slug
         blogImage {
-          fixed (width: 900 height:400) {
+          fixed(resizingBehavior: FILL, height: 400, width: 900) {
+            aspectRatio
+            base64
+            height
             src
             srcSet
             srcSetWebp
             srcWebp
-            height
-            base64
             width
-            aspectRatio
           }
         }
         content {
@@ -45,7 +45,7 @@ exports.createPages = async ({ graphql, actions }) => {
               projectName
               slug
               projectImage {
-                fixed (height: 400 width: 1000) {
+                fixed(resizingBehavior: FILL, height: 400, width: 1000) {
                   aspectRatio
                   base64
                   height

@@ -15,7 +15,7 @@ const ContactHeaderImage = () => {
       }
     `)
     return (
-      <Img style={{ height: "100%", width: "100%" }}
+      <Img
       fluid={data.myImage.childImageSharp.fluid} />)
    }
   

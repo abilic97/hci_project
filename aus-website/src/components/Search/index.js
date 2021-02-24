@@ -9,19 +9,9 @@ const nekiNiz = [
 ];
 
 export default function Search() {
-  const puniNiz = nekiNiz;
-  const [arrayToShow, setArray] = useState(nekiNiz);
-  const filters = ["face"];
-
   return (
     <div className={styles.searchContainer}>
-      <input className={styles.searchBox}
-        onChange={(e) => {
-          const value = e.target.value;
-          const newArray = puniNiz.filter((el) => el.title.includes(value));
-          setArray(newArray);
-        }} placeholder="Search"
-      />
+      <input className={styles.searchBox} placeholder="Search"/>
     </div>
   );
 }

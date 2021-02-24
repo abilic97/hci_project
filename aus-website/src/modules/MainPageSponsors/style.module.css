@@ -13,10 +13,12 @@
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding-left: 4em;
-    padding-right: 4em;
-
+    margin-left: 5em;
+    margin-right: 5em;
 }
-.sponsorsContainer * {
-    width: calc(100% * (1/6) - 10px - 1px);
+
+
+@media screen and (max-width: 700px) {
+    .sponsorsContainer div {margin-bottom: 1em;}
+    .sponsorsContainer {margin:auto; display: flex; flex-direction: column;}
 }

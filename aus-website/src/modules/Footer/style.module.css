@@ -29,6 +29,7 @@
 
 .footerLinks {
     display: flex;
+    flex-wrap: wrap;
     font-size: 16px;
     justify-content: space-around;
     border-bottom: 2px solid #D3AC2B;
@@ -37,6 +38,7 @@
 .socialContainer {
     color:white;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     padding-top: 1em;
@@ -53,3 +55,17 @@
 .copyright {
     font-size:10px;
 }
+
+@media screen and (max-width: 600px) {
+    .logo {display:  none;}
+    .headlines {display: none;}
+    .menu li {display: none;}
+    .menu {display:none}
+    .footerLinks {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+    }
+
+  }

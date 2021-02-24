@@ -12,7 +12,7 @@ const CarouselPageElement = () => {
          node {
            id
            childImageSharp {
-             fluid(maxHeight: 400) {
+             fluid {
                ...GatsbyImageSharpFluid
              }
            }

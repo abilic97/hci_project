@@ -35,15 +35,8 @@ query BlogQuery($category: String) {
           }
           author
           blogImage {
-            fixed {
-              src
-              srcSet
-              height
-              base64
-              aspectRatio
-              srcSetWebp
-              srcWebp
-              width
+            fluid (maxWidth:390 maxHeight:270)  {
+              ...GatsbyContentfulFluid
             }
           }
         }

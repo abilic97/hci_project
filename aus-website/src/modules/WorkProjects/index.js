@@ -14,16 +14,9 @@ const WorkProjects = ({ posts }) => {
                 projectName
                 slug
                 projectImage {
-                  fixed (height: 200 width: 500) {
-                    aspectRatio
-                    base64
-                    height
-                    src
-                    srcSet
-                    srcSetWebp
-                    srcWebp
-                    width
-                  }
+                    fluid (maxWidth:500 maxHeight:200)  {
+                        ...GatsbyContentfulFluid
+                      }
                 }
                 projectDescription {
                   raw
@@ -44,12 +37,12 @@ const WorkProjects = ({ posts }) => {
                         <div className={styles.project}>
                             <Link className={styles.linkToProjects} to={`/posts/${node.node.slug}`}>
                                 <div>
-                                    <Img fixed={node.node.projectImage.fixed} /> </div>
+                                    <Img fluid={node.node.projectImage.fluid} /> </div>
                                 <div>
                                     <div className={styles.projectName}>{node.node.projectName}</div>
                                     <div className={styles.ellipsisContainer}>
                                         <TextEllipsis
-                                            lines={2}
+                                            lines={5}
                                             tag={'p'}
                                             ellipsisChars={'...'}
                                             tagClass={'classname'}

@@ -13,15 +13,8 @@ const MainPageArticles = () => {
           node {
             title
             blogImage {
-              fixed (width: 500 height:200) {
-                srcWebp
-                srcSetWebp
-                srcSet
-                src
-                height
-                base64
-                width
-                aspectRatio
+              fluid (maxWidth:500 maxHeight:200)  {
+                ...GatsbyContentfulFluid
               }
             }
             content {
@@ -33,6 +26,8 @@ const MainPageArticles = () => {
       }
   }
 `)
+
+
   return (
     <div>
       <div className={styles.articlesTitle}>Featured Blog Posts</div>
@@ -41,7 +36,7 @@ const MainPageArticles = () => {
           return (
             <div className={styles.article}>
               <div>
-                <Img fixed={node.node.blogImage.fixed} />
+                <Img fluid={node.node.blogImage.fluid} />
               </div>
               <div className={styles.articleTitle}>{node.node.title}</div>
               <div className={styles.elipsis}>

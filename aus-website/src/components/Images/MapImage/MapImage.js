@@ -7,14 +7,14 @@ const MapImage = () => {
     {
       myImage: file(relativePath: {eq: "map.jpeg"}) {
         childImageSharp {
-          fixed(height: 220 width: 700) {
-            ...GatsbyImageSharpFixed
+          fluid(maxHeight: 220 maxWidth: 700) {
+            ...GatsbyImageSharpFluid
           }
         }
       }
     }
   `)
-  return <Img fixed={data.myImage.childImageSharp.fixed} ></Img>
+  return <Img fluid={data.myImage.childImageSharp.fluid} ></Img>
 }
 
 export default MapImage

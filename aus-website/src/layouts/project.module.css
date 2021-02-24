@@ -25,12 +25,13 @@
 }
 
 .projectImg {
-    padding-top: 2em;
-    padding-bottom: 2em;
+    display: flex;
+    justify-content: center;
 }
 .shareContainer {
     display: inline-flex;
     padding-bottom: 1em;
+    flex-wrap: wrap;
     padding-top:2em;
 }
 
@@ -44,3 +45,23 @@
     font-family: "Montserrat";
     padding-right: 1em;
   }
+
+  @media screen and (max-width: 800px) and (min-width: 700px) {
+    .projectImg{
+        width: 700px;
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 699px) and (min-width: 400px) {
+    .projectImg{
+        width: 400px;
+        display: flex;
+    }
+}
+@media screen and (max-width: 399px) and (min-width: 300px) {
+    .projectImg{
+        width: 290px;
+        display: flex;
+    }
+}

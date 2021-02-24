@@ -10,13 +10,13 @@ const BlogContainer = ({ blogPosts }) => {
   const chooseColor = (test) => {
 
     console.log(test)
-    if(test =="Mehanical") {
+    if (test == "Mehanical") {
       return '#97B8ED'
     }
-    else if(test == "Software") {
+    else if (test == "Software") {
       return '#E96EE9'
     }
-    else if(test == "Electronics") {
+    else if (test == "Electronics") {
       return '#D3AC2B'
     }
     else if (test == "Competitions") {
@@ -25,25 +25,26 @@ const BlogContainer = ({ blogPosts }) => {
     else if (test == "Events") {
       return '#f75858'
     }
-    else if(test == "All posts") {
+    else if (test == "All posts") {
       return 'black'
     }
   }
   return (
-    <section className={styles.container}>
-      <div>
-          {blogPosts.map(node => {
-            return (
-              <div className={styles.postBackground}>
-                <div className={styles.imageContainer}>
-                  <Img fixed={node.node.blogImage.fixed} /> </div>
-                <div className={styles.textContainer}>
-                  <div className={styles.blogPostTitle}>{node.node.title}</div>
-                  <div style={{backgroundColor: chooseColor(node.node.category)}}
+    <div className={styles.container}>
+      <div className={styles.blogPostContainer}>
+        {blogPosts.map(node => {
+          return (
+            <div className={styles.postBackground}>
+              <div className={styles.imageContainer}>
+                <Img fluid={node.node.blogImage.fluid} />
+              </div>
+              <div className={styles.textContainer}>
+                <div className={styles.blogPostTitle}>{node.node.title}</div>
+                <div style={{ backgroundColor: chooseColor(node.node.category) }}
                   className={styles.categoryContainer}>{node.node.category}</div>
-                  <div className={styles.elipsis}>
+                <div className={styles.elipsis}>
                   <TextEllipsis
-                    lines={3}
+                    lines={4}
                     tag={'p'}
                     ellipsisChars={'...'}
                     tagClass={'className'}
@@ -57,14 +58,14 @@ const BlogContainer = ({ blogPosts }) => {
                     }}>
                     {renderRichText(node.node.content)}
                   </TextEllipsis>
-                  </div>
-                  <Link className={styles.linkStyle} to={`/posts/${node.node.slug}`}>
-                    <div className={styles.linkToPost}>Read More</div>
-                  </Link>
                 </div>
+                <Link className={styles.linkStyle} to={`/posts/${node.node.slug}`}>
+                  <div className={styles.linkToPost}>Read More</div>
+                </Link>
               </div>
-            )
-          })}
+            </div>
+          )
+        })}
       </div>
       <div className={styles.categories}>
         Categories
@@ -87,7 +88,7 @@ const BlogContainer = ({ blogPosts }) => {
           Events
         </div></Link>
       </div>
-    </section>
+    </div>
   )
 }
 

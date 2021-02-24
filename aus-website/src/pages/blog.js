@@ -27,15 +27,8 @@ query {
         slug
         category
         blogImage {
-          fixed (width: 390 height:274) {
-            src
-            srcSet
-            srcSetWebp
-            srcWebp
-            height
-            base64
-            width
-            aspectRatio
+          fluid (maxWidth:390 maxHeight:270) {
+            ...GatsbyContentfulFluid
           }
         }
         content {

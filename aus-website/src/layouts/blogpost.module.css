@@ -1,5 +1,6 @@
 .container {
     display: flex;
+    flex-wrap: wrap;
     margin-left: 5em;
     margin-right: 5em;
     margin-top: 4em;
@@ -43,6 +44,7 @@
 
   }
   .shareContainer {
+    flex-wrap: wrap;
     display: inline-flex;
     padding-bottom: 1em;
     padding-top:2em;
@@ -182,4 +184,51 @@
   padding-bottom: 2em;
   padding-right: 1em;
   padding-left: 1em;
+}
+
+@media screen and (max-width: 800px) and (min-width: 600px){
+  .imageContainer {width: 600px;}
+  .blogPostcontainer{
+    border-right: none;
+    padding:unset;
+  }
+}
+@media screen and (max-width: 599px) and (min-width: 400px){
+  .imageContainer {width: 360px;}
+  .blogPostcontainer{
+    border-right: none;
+    padding:unset;
+  }
+  .container{
+    margin-left: 2em;
+    margin-right: unset;
+  }
+  .submitContainer {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.5em;
+  }
+  .newsletterContainer {
+    margin-right: 2em;
+  }
+}
+
+@media screen and (max-width: 399px) and (min-width: 320px){
+  .imageContainer {width: 280px;}
+  .blogPostcontainer{
+    border-right: none;
+    padding:unset;
+  }
+  .container{
+    margin-left: 2em;
+    margin-right: unset;
+  }
+  .submitContainer {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0.5em;
+  }
+  .newsletterContainer {
+    margin-right: 2em;
+  }
 }

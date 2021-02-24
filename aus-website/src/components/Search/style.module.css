@@ -22,3 +22,7 @@
     opacity: 1; /* Firefox */
   }
   
+
+@media screen and (max-width: 700px) {
+   .searchBox {width: 200px}
+}

@@ -21,11 +21,12 @@ const SponsorsImages = () => {
  `)
     return (
         data.photos.edges.map(image => (
-            <div>
+            <div style={{padding: '0em 2.5em 0em 2.5em'}}>
                 <Img
                     fixed={image.node.childImageSharp.fixed}
                     alt="Images">
-                </Img></div>
+                </Img>
+                </div>
 
         ))
 

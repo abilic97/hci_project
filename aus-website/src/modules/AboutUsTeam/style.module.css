@@ -77,3 +77,30 @@
     transform: scale(1.2);
 
 }
+
+@media screen and (max-width: 700px) and (min-width: 340px) {
+    .mainTeamContainer{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .teamMemberContainer {
+        flex:unset;
+        max-height: 450px;
+    }
+
+}
+
+@media screen and (max-width: 320px) and (min-width: 200px) {
+    .mainTeamContainer{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    .teamMemberContainer {
+        flex:unset;
+        max-height: 450px;
+        max-width: 270px;
+    }
+
+}

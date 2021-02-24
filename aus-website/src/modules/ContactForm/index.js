@@ -44,9 +44,9 @@ const ContactForm = () => {
                 </div>
                 <div className={styles.infoContainer}>
                     <div className={styles.contactInfo}>Address:
-            <div className={styles.information}> Ul. Ruđera Boškovića 32, 21000, Split, FESB</div>
+            <div className={styles.informationAddress}> Ul. Ruđera Boškovića 32, 21000, Split, FESB</div>
                     </div>
-                    <div className={styles.contactInfo}>Office/Labaratory:
+                    <div className={styles.contactInfo}>Office:
             <div className={styles.information}>C519</div>
                     </div>
                     <div className={styles.contactInfo}>Accepting visits:
