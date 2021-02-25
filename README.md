@@ -8,8 +8,8 @@ This website was made with two purposes:
  - It was made for Aerotechnic Association Split
  
 
-Netlify link to [website](https://aus-fesb.netlify.app/)
-Figma prototype [here](https://www.figma.com/proto/q6KLFsKjaJOzTNi9ge09E5/Ukupni?node-id=0%3A1&scaling=containhttps://www.figma.com/proto/q6KLFsKjaJOzTNi9ge09E5/Ukupni?node-id=0%3A1&scaling=contain)
+Netlify link to [website](https://aus-split.netlify.app/)
+
 
 ## What's inside? 🧐
 
